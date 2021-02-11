@@ -54,6 +54,7 @@ app.get('/weather', (req, res) => {
 			geocodeData.latitude,
 			geocodeData.longitude,
 			geocodeData.location,
+
 			(error, forcastData) => {
 				if (error) {
 					return res.send(error);
