@@ -7,8 +7,7 @@ const messageThree = document.querySelector('#message-3');
 weatherForm.addEventListener('submit', (e) => {
 	e.preventDefault();
 
-	messageOne.textContent = 'Loading...';
-
+	messageOne.textContent = 'Loading....';
 	fetch('http://192.168.0.11:3000/weather?address=' + search.value).then(
 		(res) => {
 			res.json().then((data) => {

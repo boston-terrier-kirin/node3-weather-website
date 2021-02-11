@@ -37,7 +37,7 @@ app.get('/help', (req, res) => {
 	res.render('help', {
 		title: 'Help',
 		helpText: 'What can I do for you?',
-		name: 'Kirin',
+		name: 'Kirin boston terrier',
 	});
 });
 
