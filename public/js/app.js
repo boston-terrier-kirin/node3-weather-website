@@ -8,17 +8,15 @@ weatherForm.addEventListener('submit', (e) => {
 	e.preventDefault();
 
 	messageOne.textContent = 'Loading....';
-	fetch('http://192.168.0.11:3000/weather?address=' + search.value).then(
-		(res) => {
-			res.json().then((data) => {
-				if (data.error) {
-					alert(data.error);
-				} else {
-					messageOne.textContent = data.location;
-					messageTwo.textContent = data.temperature;
-					messageThree.textContent = data.feelslike;
-				}
-			});
-		}
-	);
+	fetch('/weather?address=' + search.value).then((res) => {
+		res.json().then((data) => {
+			if (data.error) {
+				alert(data.error);
+			} else {
+				messageOne.textContent = data.location;
+				messageTwo.textContent = data.temperature;
+				messageThree.textContent = data.feelslike;
+			}
+		});
+	});
 });
